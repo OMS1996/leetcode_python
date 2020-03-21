@@ -1,7 +1,0 @@
-class Solution:
-    
-    #if you want to sort the list according to a calucation of each of its elements do this
-    
-    def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-        distance = sorted(points, key = lambda x: ((x[0]**2+ x[1]**2))**0.5)
-        return distance[:K]
