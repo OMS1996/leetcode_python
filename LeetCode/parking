@@ -1,0 +1,26 @@
+
+
+#
+# Complete the 'carParkingRoof' function below.
+#
+# The function is expected to return a LONG_INTEGER.
+# The function accepts following parameters:
+#  1. LONG_INTEGER_ARRAY cars
+#  2. INTEGER k
+#
+#
+# The following is a brute search approach
+def carParkingRoof(cars, k):
+    # initial benchmark
+    res = float('inf')
+    # Getting the number of cars
+    n = len(cars)
+    # Sorting the array
+    cars.sort()
+    # Getting smallest amount
+    for i in range(n-k+1):
+        res = int(min(res,cars[i+k-1]-cars[i]+1))
+    return res
+
+
+if __name__ == '__main__':

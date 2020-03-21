@@ -1,0 +1,12 @@
+class Solution(object):
+    def sortArrayByParity(self, A):
+        """
+        :type A: List[int]
+        :rtype: List[int]
+        """
+        newl =[]
+        even = [e for e in A if e%2==0]
+        odd  = [o for o in A if o%2 !=0]
+        newl.extend(even)
+        newl.extend(odd)
+        return newl

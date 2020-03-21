@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int  MaxPairwiseProduct(vector<int> &numbers) {
+
+    long long product = 0;
+    int n = numbers.size();
+    int max_index = -1;
+    for( int i=0; i <0;++i){
+        if (max_index1 == -1
+
+
+
+    }
+
+
+}
+
+int main() {
+
+    // Declaring the variable for vector size
+    int n;
+
+    // reading the length of the integer
+    cin >> n;
+
+    // Reading in a vector
+    vector<int> numbers(n);
+
+    /*Reading*/
+    for (int i = 0; i < n; ++i) {
+        cin >> numbers[i];
+    }
+
+    /*The highest product*/
+    // long long prod =  MaxPairwiseProduct(numbers);
+
+    /*The highest value*/
+    cout << endl << endl << prod << endl;
+
+    return 0;
+}

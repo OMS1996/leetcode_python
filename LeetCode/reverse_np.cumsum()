@@ -1,0 +1,33 @@
+########################################################################extras################################################
+# Test Case
+input_val = np.array([55,120])
+
+# expected_output_val = np.array([55,65])
+# i solved it in two ways that yield the same results
+
+# First function
+def inverse_cumsum(np_arr):
+    '''
+    function to reverse np.cumsum()
+    input np_arr: np.array()
+    return np.array()
+    
+    '''
+    #concatenating the value of the first index to difference
+    return np.concatenate((np.array(input_val[0]).reshape(1,), np.diff(input_val)))
+# Test Case
+print(inverse_cumsum(input_val))
+
+# The Second function which i would prefer this one because it is more intuatuve
+def inverse_cumsum2(np_arr):
+    '''
+    function to reverse np.cumsum()
+    input np_arr: np.array()
+    return np.array()
+    
+    '''
+    # inserting the value of np_arr[0] in index zero instead
+    return np.insert(np.diff(np_arr), 0, np_arr[0])
+# Test Case
+print(inverse_cumsum2(input_val))
+########################################################################################################################################    

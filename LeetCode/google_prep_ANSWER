@@ -1,0 +1,33 @@
+def small_string(string1,string2):
+    '''
+    Author : Omar M. Hussein, Last modified 9/ 16/ 2019, 12:16 am
+    Input: string, string
+    Output: list
+    
+    This function takes in two strings compares the two 
+    and the one that has the lowest number of of the smallest 
+    charachter value from the second one gets chosen
+    '''
+    #Splits them and changes them into lower
+    string1 = string1.lower().split(",")
+    string2 = string2.lower().split(",")
+    #Creating a dictionary for all the values
+    dic = {idx:0 for idx,s in enumerate(string2)}
+    # dictionary manual iterator
+    i=0
+    
+    # Two for loops for both strings.
+    for s2 in string2:    
+        for s1 in string1:
+            #checking the number of smallest valued character
+            if  s2.count(min(s2)) > s1.count(min(s1)):
+                #dictionary sum registry
+                dic[i]+=1
+                
+        # iterator increment
+        i+=1
+        #returning only the values in the dictionary and casting them into a list
+    return list(dic.values()) 
+
+
+# INPUT AND OUTPUT- small_string("abcd,aabc,bd","aaa,aa"), should be [3, 2]

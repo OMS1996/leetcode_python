@@ -1,0 +1,25 @@
+# python3
+
+
+def max_pairwise_product(numbers):
+    
+    # getting the length of the array.
+    n = len(numbers)
+    # Initializing the highest product
+    max_product = 0
+    
+    # using naive search and skipping over the current value
+    for first in range(n):
+        for second in range(first + 1, n):
+            max_product = max(max_product,numbers[first] * numbers[second])
+
+    return max_product
+
+# Creating the main function
+if __name__ == '__main__':
+    # Reading the value
+    input_n = int(input())
+    # Casting it into an integer list using list comprehensions
+    input_numbers = [int(x) for x in input().split()]
+    # Printing the value
+    print(max_pairwise_product(input_numbers))

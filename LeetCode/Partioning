@@ -1,0 +1,44 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#
+# Complete the 'solve' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. INTEGER k
+#  2. INTEGER_ARRAY numbers
+# Getting all the subarrays
+# All the code was developed using my personal jupyter notebook, so i couldnt import the markdowns
+# Importing all the necassary imports
+from collections import Counter
+def solve(k, numbers):
+    # Sanity check
+    if k == 0 or len(numbers) == 0:
+        return "Yes"
+
+    # Does it divide
+    if len(numbers)%k != 0:
+        # Return No
+        return "No"
+    
+    # Creating a counter dictionary
+    counter = Counter(numbers)
+    
+    # looping through it 
+    for num in counter:
+        # sanity check
+        if counter[num] > len(numbers)//k:
+            # Return No
+            return "No"
+    # Returns Yes
+    return "Yes"
+
+    
+if __name__ == '__main__':
