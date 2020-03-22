@@ -1,19 +1,14 @@
 #include <iostream>
 
-int max_pairwise_product(vector<int>& numbers){
-
-    prod = 0;
-
-    for (int i = 0; i < ; ++i) {
-        for (int j = 0; j < ; ++j) {
-            temp = numbers[i]* numbers[j];
-            if (temp >= prod){prod = temp}
-        }
-    }
-    cout<<prod<<endl;
+int sum_of_two_digits(int first_digit, int second_digit) {
+    return first_digit + second_digit;
 }
 
 int main() {
-    max_pairwise_product([1,2,3,4])
+    int a = 0;
+    int b = 0;
+    std::cin >> a;
+    std::cin >> b;
+    std::cout << sum_of_two_digits(a, b);
     return 0;
 }
