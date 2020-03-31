@@ -1,0 +1,23 @@
+def getHint(secret, guess):
+    """
+    :type secret: str
+    :type guess: str
+    :rtype: str
+    """
+    s = [(int(val),idx) for idx,val in enumerate(secret)]
+    g = [(int(val),idx) for idx,val in enumerate(guess)]
+    
+    #s=sorted(s)
+    #g=sorted(g)
+    cow,bull=0,0
+    
+    for i in range(len(s)):
+        for j in range(len(g)):
+            if s[i][0]==g[j][0]:
+                if s[i][1] == g[j][1]:
+                    bull+=1
+                else:
+                    cow+=1
+    val = "{0}A{1}B".format(bull,cow)
+    return val
+    ################################### 48 ms, faster than 17.56% ########################

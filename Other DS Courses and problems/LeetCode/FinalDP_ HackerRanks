@@ -1,0 +1,38 @@
+# Interview with multinatioal company
+
+
+# Stack problem
+def finalPrice(cost):
+    # The length of the array
+    n = len(cost)
+
+    # Creating an array with the same exact size to avoid out of bounds issues
+    # Also setting defeaults
+    temp = cost
+    # Creating an Empty stack
+    stack = []
+
+    #looping
+    for i in range(len(cost)):
+
+        # While the stack is not empty 
+        # The first element is larger than the second element
+        # Stack -1 is the last element 
+        while len(stack) > 0 and cost[stack[-1]] >= cost[i]:
+
+            #Getting the element on the top of the stack which is the index.
+            top_index = stack.pop()
+
+            #Overwriting the temp with the discounted price.
+            temp[top_index] = cost[top_index] - cost[i]
+
+        # Adding the index in the stack.
+        stack.append(i)
+
+    total=sum(temp)
+    print(total)
+    for i in stack:
+        print(i ,end=" ")
+
+
+if __name__ == '__main__':

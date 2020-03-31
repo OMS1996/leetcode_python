@@ -1,0 +1,32 @@
+class Logger(object):
+
+    def __init__(self):
+        import datetime
+        """
+        Initialize your data structure here.
+        """
+        # creating a dictionary for it
+        self.items = {}
+        
+
+    def shouldPrintMessage(self, timestamp, message):
+        
+        import datetime
+        """
+        Returns true if the message should be printed in the given timestamp, otherwise returns false.
+        If this method returns false, the message will not be printed.
+        The timestamp is in seconds granularity.
+        :type timestamp: int
+        :type message: str
+        :rtype: bool
+        """
+        if message not in self.items.keys():
+            self.items[message]=timestamp
+            return True
+        else:
+            if timestamp-self.items[message]>=10:
+                self.items[message]=timestamp
+                return True
+            else:
+                return False
+        
