@@ -9,7 +9,7 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
     months = month2 - month1
     years = year2 - year1
     
-    return year2days(years) + month2days(months) + days
+   # return year2days(years) + month2days(months) + days
 
 # I didn't have time to create these functions, but you can make them from what you already have so far
 # year2days
@@ -41,17 +41,11 @@ def nextDay(year,month,day):
 def dateIsBefore(year1,month1,day1,year2,month2,day2):
     '''Checking this is the year before'''
     if year1<year2:
-    return True
+        return True
 
 def isLeapYear(year):
     """Determines whether a year is a leap year."""
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
-
-
-
-
-
-
 
 
 
