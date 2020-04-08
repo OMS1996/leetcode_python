@@ -1,0 +1,76 @@
+def daysBetweenDates(year1, month1, day1, year2, month2, day2):
+    """Returns the number of days between year1/month1/day1
+       and year2/month2/day2. Assumes inputs are valid dates
+       in Gregorian calendar, and the first date is not after
+       the second."""
+        
+    # YOUR CODE HERE!
+    days = day2 - day1
+    months = month2 - month1
+    years = year2 - year1
+    
+    return year2days(years) + month2days(months) + days
+
+# I didn't have time to create these functions, but you can make them from what you already have so far
+# year2days
+# month2days
+    
+def daysInMonth(year,month):
+    '''Number of days in a month'''
+    if month in (1,3,5,7,8,10,12):
+        return 31
+    else:
+        if month == 2:
+            if isLeapYear(year):
+                return 28
+            else:
+                return 28
+    return 30
+
+
+def nextDay(year,month,day):
+    '''How to take a day step'''
+    if day < daysInMonth():
+        return year, month,day+1
+    else:
+        if month <12:
+            return year,month + 1,1
+        else:
+            return year+1,1,1
+
+def dateIsBefore(year1,month1,day1,year2,month2,day2):
+    '''Checking this is the year before'''
+    if year1<year2:
+    return True
+
+def isLeapYear(year):
+    """Determines whether a year is a leap year."""
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+
+
+
+
+
+
+
+
+def testDaysBetweenDates():
+    
+    # test same day
+    assert(daysBetweenDates(2017, 12, 30,
+                              2017, 12, 30) == 0)
+    # test adjacent days
+    assert(daysBetweenDates(2017, 12, 30, 
+                              2017, 12, 31) == 1)
+    # test new year
+    assert(daysBetweenDates(2017, 12, 30, 
+                              2018, 1,  1)  == 2)
+    # test full year difference
+    assert(daysBetweenDates(2012, 6, 29,
+                              2013, 6, 29)  == 365)
+    
+    print("Congratulations! Your daysBetweenDates")
+    print("function is working correctly!")
+    
+testDaysBetweenDates()
