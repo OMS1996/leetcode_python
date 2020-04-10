@@ -57,13 +57,13 @@ def find_area(calls):
     # Getting the codes
     lst = []
     for call in calls:
-        if '(0' in call[1]:
-            lst.append(brackets(call))
-        elif ' ' in call[1] and call[1][0] in ['7','8','9']:
-             lst.append(call[1][:4])
-        elif call[1][:3] == '140':
-            lst.append('140')
-    
+        if call[0][0:5] == "(080)":
+            if '(0' in call[1]:
+                lst.append(brackets(call))             
+            elif call[1][:3] == '140':
+                lst.append('140')
+            else:
+                lst.append(call[1][:4])
     return lst
     
 def sorted_unique(lst):
@@ -96,7 +96,7 @@ for code in lst:
 def count_080(calls):
     count = 0
     for call in calls:
-        if '(080)' == call[1][:5]:
+        if '(080)' == call[1][0:5] and '(080)' == call[0][0:5] :
             count+=1
     return count
             

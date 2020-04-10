@@ -33,31 +33,44 @@ September 2016.".
 
 """
 
+def get_numbers(calls):
+    nums = set()
+    for call in calls:
+        nums.update([call[0],call[1]])
+    return nums
+        
 
 
-def highest(calls):
+def longest_time(calls):
     '''
     function to get index and maximum value with BigO(n)
     '''
-    longest_call = -99
-    i = -1
-    for lst in calls:
-        # getting the next index.
-        i+=1
-        # The amount of time.
-        call_duration = int(lst[3])
-        
-        if longest_call  < call_duration:
-            longest_call  = call_duration
-            index = i
-    return index,longest_call 
+    # getting all the Unique phone numbers.
+    nums = get_numbers(calls)
+    
+    # Creating a dictionary and intializing it with Zero for its values.
+    call_dict = dict()
+    # From Keys
+    call_dict = dict.fromkeys(nums,0)
+    
+    # Getting all the call counts.
+    for call in calls:
+        call_dict[call[0]] += int(call[3])
+        call_dict[call[1]] += int(call[3])
+    return call_dict
 
-# Getting the values.
-index,longest = highest(calls)
+# dictionary creation
+call_dict = longest_time(calls)
+
+# Getting the largest value key and time.
+key = max(call_dict, key=call_dict.get)
+time = call_dict[key]
+    
+
 
 # Printing the required answers.
 print("{} spent the longest time, {} seconds, on the phone during \
-September 2016.".format(calls[index][0],longest))
+September 2016.".format(key,time))
 
 
 

@@ -1,15 +1,16 @@
 
 Task 0:
-BigO(1)
+BigO of O(1), because accessing a accessing a list takes on O(1) 
+and there is two lines both O(1) which approximates to O(1).
 
 Task 1:
-BigO(n)
+BigO(n), because the access is sequential which results in looping through every element
 
 Task2:
-BigO(n)
+BigO(n) because we are performing a full scan.
 
 Task3:
-BigO(n)
+BigO of O(n log n) because the longest operation here is the sorting operation which takes n log n
 
 Task4:
-BigO(n)
+BigO of O(n log n) because the longest operation here is the sorting operation which takes n log n
