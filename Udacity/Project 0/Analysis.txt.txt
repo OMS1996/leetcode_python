@@ -1,0 +1,15 @@
+
+Task 0:
+BigO(1)
+
+Task 1:
+BigO(n)
+
+Task2:
+BigO(n)
+
+Task3:
+BigO(n)
+
+Task4:
+BigO(n)
