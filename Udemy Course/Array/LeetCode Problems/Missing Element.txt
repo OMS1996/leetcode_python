@@ -23,3 +23,18 @@ class Solution:
 	l = len(nums)
 	s = l*(l+1)//2
 	return s-sum(nums)
+
+# Solution 3: XOR
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        result = 0
+        n = len(nums)+1
+        nums1 = [i for i in range(n)]
+        for num in nums1+nums:
+            result ^= num
+        return result
+        
