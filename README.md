@@ -55,7 +55,7 @@
       
       return []
 
- - XOR : Exclusive or
+ - XOR : Exclusive OR : if it is present in one but not present in the other
 
 
 
