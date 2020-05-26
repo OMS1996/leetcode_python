@@ -55,7 +55,7 @@
       
       return []
 
-
+ - XOR : Exclusive or
 
 
 
