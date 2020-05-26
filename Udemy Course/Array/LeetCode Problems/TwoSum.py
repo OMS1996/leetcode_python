@@ -64,7 +64,7 @@ class Solution:
 
         
         
-# Solution 2 to find all the pair sums
+# Solution 2 to find ALL OF THEM all the pair sums
 # -*- coding: utf-8 -*-
 """
 Created on Mon May 25 20:42:53 2020
@@ -75,8 +75,8 @@ nums = [3,2,4]
 target = 6
 
 nums = [3,3]
+
 def twoSum(arr, k):
-    
     # Seen and output sets
     seen = set()
     output = set()
