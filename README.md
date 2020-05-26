@@ -15,17 +15,29 @@
     - Finding the nth element in a geoemtric sequence an = a1*r**n−1
   - Seen / output : if you have seen this before add it to the output if 'NOT' add it to the seen
     - Example:
+              
               def twoSum(arr, k):
+                  
                   # Seen and output sets
+                  
                   seen = set()
+                  
                   output = set()
+                  
                   for num in arr:
+                  
                       target = k - num
+                      
                       if target not in seen:
-                          seen.add(num)
+                      
+                         seen.add(num)
+                      
                       else:
+                           
                           output.add((min(num,target),max(num,target)))
+                  
                   arr_lst = list(output)
+                  
                   return arr_lst
                   
   - Have i seen whats left of of you ?                     
