@@ -29,13 +29,13 @@
                   return arr_lst
                   
   - Have i seen whats left of of you ?                     
+      - Example:
       lib = {}
       for i,n in enumerate(nums):
           if n in lib:
               return [lib[n],i]
           lib[target - n] = i
       return []
-    -
 
 
 
