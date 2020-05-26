@@ -32,10 +32,15 @@
       - Example:
       
       lib = {}
+      
       for i,n in enumerate(nums):
+          
           if n in lib:
-              return [lib[n],i]
+          
+               return [lib[n],i]
+      
           lib[target - n] = i
+      
       return []
 
 
