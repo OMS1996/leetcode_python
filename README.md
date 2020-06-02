@@ -56,6 +56,55 @@
       return []
 
  - XOR : Exclusive OR : if it is present in one but not present in the other
+ 
+ - Cumulative & overall indicators
+    * in the event where you have to find the fitness of a sequence (lets say total sum of a sequence), create a cumulative 
+    that compares all what we have right now to what we have now and before, Once you chose the variable with the best local fitness
+    compare it to the global fitness and from then on out repeat the process iteratively until you find the best global value
+    for a sequence of numbers, remember that convergence only happens when you compare.
+    * Example code:
+                           """
+                           Created on Wed May 27 22:34:13 2020
+                           @author: omar
+                           Finding the largest subarray in a sequence.
+                           """
+                           nums = [-2,1,-3,4,-1,2,1,-5,4]
+                           def maxSubArray(nums):
+
+                               n = len(nums) # Length
+                               # Base case
+                               if n==0:
+                                   return 0
+
+                               # Sentinels
+                               sumed = 0
+                               max_sum = float('-inf')
+
+                               # BigO(N)
+                               for i in range(n):    
+
+                                   if sumed+nums[i] >= nums[i]:
+                                       sumed = sumed+nums[i]
+                                   else:
+                                       sumed = nums[i]        
+
+                                   if sumed >= max_sum:
+                                       max_sum = sumed
+
+                               return max_sum
+                
+        
+                
+            
+     
+
+
+
+
+
+
+
+   
 
 
 
