@@ -43,18 +43,13 @@
   - Have i seen whats left of of you ?    
     The current number is being tested to see if it was seen before
       - Example:
-      
-                 lib = {}
-
-                 for i,n in enumerate(nums):
-
-                     if n in lib:
-
-                          return [lib[n],i]
-
-                     lib[target - n] = i
-
-                 return []
+                 def TwoSum(nums)
+                            lib = {}
+                            for i,n in enumerate(nums):
+                                if n in lib:
+                                     return [lib[n],i]
+                                lib[target - n] = i
+                            return []
 
  - XOR : Exclusive OR : if it is present in one but not present in the other
  
