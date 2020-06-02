@@ -43,17 +43,17 @@
   - Have i seen whats left of of you ?                     
       - Example:
       
-      lib = {}
-      
-      for i,n in enumerate(nums):
-          
-          if n in lib:
-          
-               return [lib[n],i]
-      
-          lib[target - n] = i
-      
-      return []
+                 lib = {}
+
+                 for i,n in enumerate(nums):
+
+                     if n in lib:
+
+                          return [lib[n],i]
+
+                     lib[target - n] = i
+
+                 return []
 
  - XOR : Exclusive OR : if it is present in one but not present in the other
  
@@ -63,14 +63,8 @@
     compare it to the global fitness and from then on out repeat the process iteratively until you find the best global value
     for a sequence of numbers, remember that convergence only happens when you compare.
     * Example code:
-                           """
-                           Created on Wed May 27 22:34:13 2020
-                           @author: omar
-                           Finding the largest subarray in a sequence.
-                           """
-                           nums = [-2,1,-3,4,-1,2,1,-5,4]
+    
                            def maxSubArray(nums):
-
                                n = len(nums) # Length
                                # Base case
                                if n==0:
@@ -92,8 +86,10 @@
                                        max_sum = sumed
 
                                return max_sum
+                               
  - Note,The double while is not N^2 if you continue on with the same iterator:
       On that not we can create two pointers based of the two while loops as such
+          
           
           def reverseString(s):
                 
