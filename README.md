@@ -40,7 +40,8 @@
                   
                   return arr_lst
                   
-  - Have i seen whats left of of you ?                     
+  - Have i seen whats left of of you ?    
+    The current number is being tested to see if it was seen before
       - Example:
       
                  lib = {}
@@ -88,7 +89,7 @@
                                return max_sum
                                
  - Note,The double while is not N^2 if you continue on with the same iterator:
-      On that not we can create two pointers based of the two while loops as such
+      On that not we can create two pointers based of the two while loops as such that they are used to slice the array.
           
           
           def reverseString(s):
