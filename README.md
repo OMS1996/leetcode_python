@@ -40,20 +40,16 @@
                   
                   return arr_lst
                   
-  - Have i seen whats left of of you ?                     
+  - Have i seen whats left of of you ?    
+    The current number is being tested to see if it was seen before
       - Example:
-      
-      lib = {}
-      
-      for i,n in enumerate(nums):
-          
-          if n in lib:
-          
-               return [lib[n],i]
-      
-          lib[target - n] = i
-      
-      return []
+                 def TwoSum(nums)
+                            lib = {}
+                            for i,n in enumerate(nums):
+                                if n in lib:
+                                     return [lib[n],i]
+                                lib[target - n] = i
+                            return []
 
  - XOR : Exclusive OR : if it is present in one but not present in the other
  
@@ -63,14 +59,8 @@
     compare it to the global fitness and from then on out repeat the process iteratively until you find the best global value
     for a sequence of numbers, remember that convergence only happens when you compare.
     * Example code:
-                           """
-                           Created on Wed May 27 22:34:13 2020
-                           @author: omar
-                           Finding the largest subarray in a sequence.
-                           """
-                           nums = [-2,1,-3,4,-1,2,1,-5,4]
+    
                            def maxSubArray(nums):
-
                                n = len(nums) # Length
                                # Base case
                                if n==0:
@@ -92,26 +82,30 @@
                                        max_sum = sumed
 
                                return max_sum
+                               
  - Note,The double while is not N^2 if you continue on with the same iterator:
-      On that not we can create two pointers based of the two while loops as such
+      On that not we can create two pointers based of the two while loops as such that they are used to slice the array.
+          
           
           def reverseString(s):
-    """
-    :type s: str
-    :rtype: str
-    """
-    n = len(s)
-    words = list()
-    i = 0
-    while i < n:
-        if s[i] != ' ':
-            word_start = i
-            while i < n and s[i] != ' ':
-                i += 1
-            words.append(s[word_start:i])
-        i += 1
-        
-    return " ".join(reversed(words))
+                
+                """
+                :type s: str
+                :rtype: str
+                """
+                
+                n = len(s)
+                words = list()
+                i = 0
+                while i < n:
+                    if s[i] != ' ':
+                        word_start = i
+                        while i < n and s[i] != ' ':
+                            i += 1
+                        words.append(s[word_start:i])
+                    i += 1
+
+                return " ".join(reversed(words))
                 
         
                 
