@@ -108,32 +108,47 @@
                 return " ".join(reversed(words))
                 
   - The run length compression algorithm:
-  
-                       # https://www.techiedelight.com/run-length-encoding-rle-data-compression-algorithm/#:~:text=Run%20length%20encoding%20(RLE)%20is,on%20a%20solid%20white%20background.
-                       
-                       def encode(s):
-                             encoding = ""  # stores output String
 
-                             i = 0
-                             while i < len(s):
-                              # count occurrences of character at index i
-                              count = 1
+                              def compress(s):
+                                  """
+                                  This solution compresses without checking. Known as the RunLength Compression algorithm.
+                                  """
 
-                              while i + 1 < len(s) and s[i] == s[i + 1]:
-                               count = count + 1
-                               i = i + 1
+                                  # Begin Run as empty string
+                                  r = ""
+                                  l = len(s)
 
-                              # append current character and its count to the result
-                              encoding += str(count) + s[i]
-                              i = i + 1
+                                  # Check for length 0
+                                  if l == 0:
+                                      return ""
 
-                             return encoding
+                                  # Check for length 1
+                                  if l == 1:
+                                      return s + "1"
 
+                                  #Intialize Values
+                                  last = s[0]
+                                  cnt = 1
+                                  i = 1
 
-                            if __name__ == '__main__':
+                                  while i < l:
 
-                             s = "ABBCCCD"
-                             print(encode(s))
+                                      # Check to see if it is the same letter
+                                      if s[i] == s[i - 1]: 
+                                          # Add a count if same as previous
+                                          cnt += 1
+                                      else:
+                                          # Otherwise store the previous data
+                                          r = r + s[i - 1] + str(cnt)
+                                          cnt = 1
+
+                                      # Add to index count to terminate while loop
+                                      i += 1
+
+                                  # Put everything back into run
+                                  r = r + s[i - 1] + str(cnt)
+
+                                  return r
 
 
                 
