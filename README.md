@@ -109,7 +109,7 @@
                 
   - The run length compression algorithm:
   
-                       # Perform Run Length Encoding (RLE) data compression algorithm on str
+                       # https://www.techiedelight.com/run-length-encoding-rle-data-compression-algorithm/#:~:text=Run%20length%20encoding%20(RLE)%20is,on%20a%20solid%20white%20background.
                        
                        def encode(s):
                              encoding = ""  # stores output String
