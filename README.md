@@ -149,6 +149,12 @@
                                   r = r + s[i - 1] + str(cnt)
 
                                   return r
+        
+        
+      - While loop for more freedom, just remember to subtract 1 from the length.
+        
+        
+        
 # HashMap
 
 import collections
